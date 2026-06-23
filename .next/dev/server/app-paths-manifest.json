@@ -1,0 +1,6 @@
+{
+  "/api/preorders/route": "app/api/preorders/route.js",
+  "/page": "app/page.js",
+  "/preorders/create/page": "app/preorders/create/page.js",
+  "/preorders/page": "app/preorders/page.js"
+}

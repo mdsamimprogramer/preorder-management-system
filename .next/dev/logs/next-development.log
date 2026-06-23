@@ -1,0 +1,196 @@
+[00:00:00.795] Server  LOG      ✓ Ready in 518ms
+[00:00:03.369] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.615] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:07.677] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.findMany()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:58:145
+
+  55 };
+  56 const skip = (page - 1) * limit;
+  57 const [items, total] = await Promise.all([
+→ 58     {imported module ./src/lib/prisma.ts}["prisma"].preorder.findMany(
+The table `main.Preorder` does not exist in the current database.
+[00:00:07.822] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findMany()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:58:145
+
+  55 };
+  56 const skip = (page - 1) * limit;
+  57 const [items, total] = await Promise.all([
+→ 58     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findMany(
+The table `main.Preorder` does not exist in the current database.
+[00:00:17.041] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:27.665] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:00:35.642] Server  WARN     ⚠ Cross origin request detected from 192.168.1.105 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:35.658] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:37.055] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:37.099] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.count()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+
+  61     skip,
+  62     take: limit
+  63 }),
+→ 64 {imported module ./src/lib/prisma.ts}["prisma"].preorder.count(
+The table `main.Preorder` does not exist in the current database.
+[00:00:37.260] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+
+  61     skip,
+  62     take: limit
+  63 }),
+→ 64 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count(
+The table `main.Preorder` does not exist in the current database.
+[00:00:53.698] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:53.754] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.count()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+
+  61     skip,
+  62     take: limit
+  63 }),
+→ 64 {imported module ./src/lib/prisma.ts}["prisma"].preorder.count(
+The table `main.Preorder` does not exist in the current database.
+[00:00:54.025] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:54.025] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+
+  61     skip,
+  62     take: limit
+  63 }),
+→ 64 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count(
+The table `main.Preorder` does not exist in the current database.
+[00:00:57.261] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:03.232] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:04.286] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:01:04.324] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.count()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+
+  61     skip,
+  62     take: limit
+  63 }),
+→ 64 {imported module ./src/lib/prisma.ts}["prisma"].preorder.count(
+The table `main.Preorder` does not exist in the current database.
+[00:01:04.456] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+
+  61     skip,
+  62     take: limit
+  63 }),
+→ 64 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count(
+The table `main.Preorder` does not exist in the current database.
+[00:02:33.144] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:02:33.200] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.count()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+
+  61     skip,
+  62     take: limit
+  63 }),
+→ 64 {imported module ./src/lib/prisma.ts}["prisma"].preorder.count(
+The table `main.Preorder` does not exist in the current database.
+[00:02:33.362] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:33.362] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+
+  61     skip,
+  62     take: limit
+  63 }),
+→ 64 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count(
+The table `main.Preorder` does not exist in the current database.
+[00:02:36.126] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:48.385] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:02:49.221] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:02:49.985] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:02:50.129] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:02:50.291] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:02:50.435] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:02:50.758] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:02:51.145] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
+[00:02:51.291] Server  ERROR   PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+
+  113     });
+  114 }
+  115 async function createPreorder(data) {
+→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
+The table `main.Preorder` does not exist in the current database.
