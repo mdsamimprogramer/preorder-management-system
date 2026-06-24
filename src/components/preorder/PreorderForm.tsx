@@ -143,15 +143,19 @@ export function PreorderForm({
         title="Status"
         description="Active preorders are visible to customers."
       >
-        <label className="flex items-center gap-3">
+        <label className="group flex items-center gap-3 cursor-pointer">
           <input
             name="active"
             type="checkbox"
             defaultChecked={(defaultValues.status ?? "ACTIVE") === "ACTIVE"}
-            className="peer sr-only"
+            className="sr-only"
           />
-          <span className="relative h-6 w-10 rounded-md bg-[#e8e9eb] transition peer-checked:bg-[#1f2023]">
-            <span className="absolute left-1 top-1 h-4 w-4 rounded-[4px] bg-white transition peer-checked:left-5" />
+          <span
+            className="relative h-6 w-10 rounded-md bg-[#e8e9eb] transition group-has-[:checked]:bg-[#1f2023]"
+          >
+            <span
+              className="absolute left-1 top-1 h-4 w-4 rounded-[4px] bg-white transition group-has-[:checked]:translate-x-4"
+            />
           </span>
           <span className="text-[13px] font-medium text-[#4d535a]">
             Active

@@ -236,25 +236,25 @@ function PreorderForm({ action, defaultValues = {}, formId = "preorder-form", is
                 title: "Status",
                 description: "Active preorders are visible to customers.",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                    className: "flex items-center gap-3",
+                    className: "group flex items-center gap-3 cursor-pointer",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                             name: "active",
                             type: "checkbox",
                             defaultChecked: (defaultValues.status ?? "ACTIVE") === "ACTIVE",
-                            className: "peer sr-only"
+                            className: "sr-only"
                         }, void 0, false, {
                             fileName: "[project]/src/components/preorder/PreorderForm.tsx",
                             lineNumber: 147,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "relative h-6 w-10 rounded-md bg-[#e8e9eb] transition peer-checked:bg-[#1f2023]",
+                            className: "relative h-6 w-10 rounded-md bg-[#e8e9eb] transition group-has-[:checked]:bg-[#1f2023]",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "absolute left-1 top-1 h-4 w-4 rounded-[4px] bg-white transition peer-checked:left-5"
+                                className: "absolute left-1 top-1 h-4 w-4 rounded-[4px] bg-white transition group-has-[:checked]:translate-x-4"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/preorder/PreorderForm.tsx",
-                                lineNumber: 154,
+                                lineNumber: 156,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
@@ -267,7 +267,7 @@ function PreorderForm({ action, defaultValues = {}, formId = "preorder-form", is
                             children: "Active"
                         }, void 0, false, {
                             fileName: "[project]/src/components/preorder/PreorderForm.tsx",
-                            lineNumber: 156,
+                            lineNumber: 160,
                             columnNumber: 11
                         }, this)
                     ]
@@ -290,7 +290,7 @@ function PreorderForm({ action, defaultValues = {}, formId = "preorder-form", is
                         children: "Cancel"
                     }, void 0, false, {
                         fileName: "[project]/src/components/preorder/PreorderForm.tsx",
-                        lineNumber: 163,
+                        lineNumber: 167,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -300,13 +300,13 @@ function PreorderForm({ action, defaultValues = {}, formId = "preorder-form", is
                         children: isSaving ? "Saving..." : submitLabel
                     }, void 0, false, {
                         fileName: "[project]/src/components/preorder/PreorderForm.tsx",
-                        lineNumber: 169,
+                        lineNumber: 173,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/preorder/PreorderForm.tsx",
-                lineNumber: 162,
+                lineNumber: 166,
                 columnNumber: 7
             }, this)
         ]
@@ -333,11 +333,13 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$preorder$2f$PreorderForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/preorder/PreorderForm.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -381,28 +383,87 @@ function CreatePreorderClient() {
             setIsSaving(false);
         }
     };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$preorder$2f$PreorderForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PreorderForm"], {
-                action: "/api/preorders",
-                isSaving: isSaving,
-                onSubmit: handleSubmit,
-                submitLabel: "Save changes"
-            }, void 0, false, {
-                fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
-                lineNumber: 57,
-                columnNumber: 7
-            }, this),
-            error ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "mt-3 text-[13px] font-medium text-red-600",
-                children: error
-            }, void 0, false, {
-                fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
-                lineNumber: 64,
-                columnNumber: 9
-            }, this) : null
-        ]
-    }, void 0, true);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+        className: "min-h-screen bg-[#f3f3f3] px-4 py-6 text-[#202328]",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mx-auto w-full max-w-[820px]",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mb-7 flex items-center justify-between",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/preorders",
+                            className: "inline-flex h-9 items-center justify-center rounded-md border border-[#d7dade] bg-white px-4 text-[13px] font-bold text-[#202328] shadow-sm hover:bg-[#f3f3f4]",
+                            children: "< Back"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+                            lineNumber: 60,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/preorders",
+                                    className: "inline-flex h-9 items-center justify-center rounded-md border border-[#d7dade] bg-white px-4 text-[13px] font-bold text-[#202328] shadow-sm hover:bg-[#f3f3f4]",
+                                    children: "Cancel"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+                                    lineNumber: 67,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "submit",
+                                    form: "preorder-form",
+                                    disabled: isSaving,
+                                    className: "inline-flex h-9 items-center justify-center rounded-md bg-[#1f2023] px-5 text-[13px] font-bold text-white shadow-sm ring-1 ring-black/20 hover:bg-black disabled:cursor-not-allowed disabled:opacity-70",
+                                    children: isSaving ? "Saving..." : "Save changes"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+                                    lineNumber: 73,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+                            lineNumber: 66,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+                    lineNumber: 59,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$preorder$2f$PreorderForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PreorderForm"], {
+                    action: "/api/preorders",
+                    isSaving: isSaving,
+                    onSubmit: handleSubmit,
+                    submitLabel: "Save changes"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+                    lineNumber: 84,
+                    columnNumber: 9
+                }, this),
+                error ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "mt-3 text-[13px] font-medium text-red-600",
+                    children: error
+                }, void 0, false, {
+                    fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+                    lineNumber: 91,
+                    columnNumber: 11
+                }, this) : null
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+            lineNumber: 58,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/preorder/CreatePreorderClient.tsx",
+        lineNumber: 57,
+        columnNumber: 5
+    }, this);
 }
 _s(CreatePreorderClient, "Btitm3uhfDHgE4vbZuNZFfY/FCc=", false, function() {
     return [

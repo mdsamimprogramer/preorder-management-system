@@ -435,12 +435,12 @@ img, video {
   width: .875rem;
 }
 
-.w-36 {
-  width: 9rem;
-}
-
 .w-4 {
   width: 1rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .w-7 {
@@ -501,6 +501,10 @@ img, video {
 
 .border-collapse {
   border-collapse: collapse;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -1026,6 +1030,10 @@ img, video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.accent-\[\#1f2023\] {
+  accent-color: #1f2023;
+}
+
 .shadow-\[inset_0_0_0_3px_white\] {
   --tw-shadow: inset 0 0 0 3px white;
   --tw-shadow-colored: inset 0 0 0 3px var(--tw-shadow-color);
@@ -1176,19 +1184,20 @@ button, input, textarea, select {
   cursor: not-allowed;
 }
 
-.disabled\:opacity-60:disabled {
-  opacity: .6;
+.disabled\:opacity-50:disabled {
+  opacity: .5;
 }
 
 .disabled\:opacity-70:disabled {
   opacity: .7;
 }
 
-.peer:checked ~ .peer-checked\:left-5 {
-  left: 1.25rem;
+.group:has(:checked) .group-has-\[\:checked\]\:translate-x-4 {
+  --tw-translate-x: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.peer:checked ~ .peer-checked\:bg-\[\#1f2023\] {
+.group:has(:checked) .group-has-\[\:checked\]\:bg-\[\#1f2023\] {
   --tw-bg-opacity: 1;
   background-color: rgb(31 32 35 / var(--tw-bg-opacity));
 }

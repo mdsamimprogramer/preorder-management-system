@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prisma": "prisma"
+    "prisma": "prisma",
+    "seed": "node prisma/seed.mjs"
   },
   "dependencies": {
     "next": "16.0.0",

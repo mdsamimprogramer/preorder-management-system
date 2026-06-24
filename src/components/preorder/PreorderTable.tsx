@@ -1,12 +1,21 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type {
   PreorderFilter,
   PreorderItem,
   PreorderSortBy,
 } from "@/types/preorder";
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  PencilIcon,
+  SortIcon,
+  TrashIcon,
+} from "@/components/ui/icons";
 
 interface PreorderTableProps {
   items: PreorderItem[];
@@ -53,19 +62,40 @@ export function PreorderTable({
   sortOrder,
   page,
   pages,
-  total,
+  total: initialTotal,
   limit,
 }: PreorderTableProps) {
   const [items, setItems] = useState(initialItems);
+  const [total, setTotal] = useState(initialTotal);
   const [checkedIds, setCheckedIds] = useState<string[]>([]);
-  const [actionLoading, setActionLoading] = useState(false);
+  const [loadingId, setLoadingId] = useState<string | null>(null);
   const [sortOpen, setSortOpen] = useState(false);
+  const sortRef = useRef<HTMLDivElement>(null);
 
   const allSelected = useMemo(
     () => items.length > 0 && checkedIds.length === items.length,
     [items.length, checkedIds],
   );
   const range = getRange(page, limit, items.length, total);
+
+  useEffect(() => {
+    setItems(initialItems);
+    setTotal(initialTotal);
+    setCheckedIds([]);
+  }, [initialItems, initialTotal]);
+
+  useEffect(() => {
+    if (!sortOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (sortRef.current && !sortRef.current.contains(event.target as Node)) {
+        setSortOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [sortOpen]);
 
   const getQuery = (
     overrides: Partial<
@@ -104,14 +134,17 @@ export function PreorderTable({
   const removeItem = (id: string) => {
     setItems((current) => current.filter((item) => item.id !== id));
     setCheckedIds((current) => current.filter((itemId) => itemId !== id));
+    setTotal((current) => Math.max(0, current - 1));
   };
 
   const handleToggleStatus = async (id: string) => {
     const item = items.find((value) => value.id === id);
-    if (!item) return;
+    if (!item || loadingId) return;
 
     const nextStatus = item.status === "ACTIVE" ? "INACTIVE" : "ACTIVE";
-    setActionLoading(true);
+    const previousStatus = item.status;
+    setLoadingId(id);
+    updateItem(id, { status: nextStatus });
 
     const response = await fetch(`/api/preorders/${id}`, {
       method: "PUT",
@@ -130,20 +163,25 @@ export function PreorderTable({
       }),
     });
 
-    setActionLoading(false);
-    if (response.ok) updateItem(id, { status: nextStatus });
+    setLoadingId(null);
+    if (!response.ok) updateItem(id, { status: previousStatus });
   };
 
   const handleDelete = async (id: string) => {
-    setActionLoading(true);
+    if (loadingId) return;
+
+    setLoadingId(id);
     const response = await fetch(`/api/preorders/${id}`, { method: "DELETE" });
-    setActionLoading(false);
+    setLoadingId(null);
     if (response.ok) removeItem(id);
   };
 
   return (
     <div className="overflow-visible rounded-xl border border-[#d6d8db] bg-white shadow-sm">
-      <div className="relative flex min-h-12 items-center justify-between border-b border-[#dedfe1] px-3">
+      <div
+        ref={sortRef}
+        className="relative flex min-h-12 items-center justify-between border-b border-[#dedfe1] px-3"
+      >
         <div className="flex items-center gap-1">
           {(["ALL", "ACTIVE", "INACTIVE"] as PreorderFilter[]).map((value) => (
             <Link
@@ -165,19 +203,20 @@ export function PreorderTable({
         <button
           type="button"
           onClick={() => setSortOpen((open) => !open)}
-          className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#dcdee0] bg-white text-[15px] font-bold text-[#4b4f56] shadow-sm hover:bg-[#f6f6f7]"
+          className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#dcdee0] bg-white text-[#4b4f56] shadow-sm hover:bg-[#f6f6f7]"
           aria-label="Sort preorders"
         >
-          Sort
+          <SortIcon />
         </button>
 
         {sortOpen ? (
-          <div className="absolute right-3 top-10 z-20 w-36 rounded-xl border border-[#dadbdd] bg-white py-2 text-[13px] shadow-lg">
+          <div className="absolute right-3 top-10 z-20 w-40 rounded-xl border border-[#dadbdd] bg-white py-2 text-[13px] shadow-lg">
             <p className="px-3 pb-1 text-[#464a50]">Sort by</p>
             {sortOptions.map((option) => (
               <Link
                 key={option.value}
                 href={getQuery({ sortBy: option.value, page: "1" })}
+                onClick={() => setSortOpen(false)}
                 className="flex items-center gap-2 px-3 py-1.5 text-[#3e4247] hover:bg-[#f3f3f4]"
               >
                 <span
@@ -193,20 +232,24 @@ export function PreorderTable({
             <div className="my-1 border-t border-[#ececee]" />
             <Link
               href={getQuery({ sortOrder: "asc", page: "1" })}
-              className={`block px-3 py-1.5 font-bold hover:bg-[#f3f3f4] ${
+              onClick={() => setSortOpen(false)}
+              className={`flex items-center gap-2 px-3 py-1.5 font-bold hover:bg-[#f3f3f4] ${
                 sortOrder === "asc" ? "text-[#202124]" : "text-[#5f646b]"
               }`}
             >
+              <ArrowUpIcon />
               Ascending
             </Link>
             <Link
               href={getQuery({ sortOrder: "desc", page: "1" })}
-              className={`mx-1 block rounded-md px-2 py-1.5 font-bold hover:bg-[#eeeeef] ${
+              onClick={() => setSortOpen(false)}
+              className={`mx-1 flex items-center gap-2 rounded-md px-2 py-1.5 font-bold hover:bg-[#eeeeef] ${
                 sortOrder === "desc"
                   ? "bg-[#ececee] text-[#202124]"
                   : "text-[#5f646b]"
               }`}
             >
+              <ArrowDownIcon />
               Descending
             </Link>
           </div>
@@ -222,7 +265,7 @@ export function PreorderTable({
                   type="checkbox"
                   checked={allSelected}
                   onChange={toggleAll}
-                  className="h-4 w-4 rounded border-[#b9bdc2]"
+                  className="h-4 w-4 rounded border-[#b9bdc2] accent-[#1f2023]"
                   aria-label="Select all preorders"
                 />
               </th>
@@ -239,9 +282,7 @@ export function PreorderTable({
             {items.length === 0 ? (
               <tr>
                 <td colSpan={8} className="px-4 py-12 text-center">
-                  <p className="font-bold text-[#202124]">
-                    No preorders found
-                  </p>
+                  <p className="font-bold text-[#202124]">No preorders found</p>
                 </td>
               </tr>
             ) : (
@@ -255,7 +296,7 @@ export function PreorderTable({
                       type="checkbox"
                       checked={checkedIds.includes(item.id)}
                       onChange={() => toggleSelection(item.id)}
-                      className="h-4 w-4 rounded border-[#b9bdc2]"
+                      className="h-4 w-4 rounded border-[#b9bdc2] accent-[#1f2023]"
                       aria-label={`Select ${item.title}`}
                     />
                   </td>
@@ -270,8 +311,8 @@ export function PreorderTable({
                     <button
                       type="button"
                       onClick={() => handleToggleStatus(item.id)}
-                      disabled={actionLoading}
-                      className={`relative h-[18px] w-8 rounded-md transition disabled:opacity-60 ${
+                      disabled={loadingId === item.id}
+                      className={`relative h-[18px] w-8 rounded-md transition disabled:opacity-50 ${
                         item.status === "ACTIVE"
                           ? "bg-[#1f2023]"
                           : "bg-[#e8e9eb]"
@@ -280,7 +321,9 @@ export function PreorderTable({
                     >
                       <span
                         className={`absolute top-[3px] h-3 w-3 rounded-[3px] bg-white transition ${
-                          item.status === "ACTIVE" ? "right-[3px]" : "left-[3px]"
+                          item.status === "ACTIVE"
+                            ? "right-[3px]"
+                            : "left-[3px]"
                         }`}
                       />
                     </button>
@@ -289,19 +332,19 @@ export function PreorderTable({
                     <div className="flex justify-end gap-2">
                       <Link
                         href={`/preorders/${item.id}`}
-                        className="flex h-7 w-7 items-center justify-center rounded-md border border-[#cfd2d5] bg-white text-[12px] font-bold text-[#4a4f55] hover:bg-[#f3f3f4]"
+                        className="flex h-7 w-7 items-center justify-center rounded-md border border-[#cfd2d5] bg-white text-[#4a4f55] hover:bg-[#f3f3f4]"
                         aria-label={`Edit ${item.title}`}
                       >
-                        Edit
+                        <PencilIcon />
                       </Link>
                       <button
                         type="button"
                         onClick={() => handleDelete(item.id)}
-                        disabled={actionLoading}
-                        className="flex h-7 w-7 items-center justify-center rounded-md border border-[#cfd2d5] bg-white text-[12px] font-bold text-[#4a4f55] hover:bg-[#f3f3f4] disabled:opacity-60"
+                        disabled={loadingId === item.id}
+                        className="flex h-7 w-7 items-center justify-center rounded-md border border-[#cfd2d5] bg-white text-[#4a4f55] hover:bg-[#f3f3f4] disabled:opacity-50"
                         aria-label={`Delete ${item.title}`}
                       >
-                        Del
+                        <TrashIcon />
                       </button>
                     </div>
                   </td>
@@ -322,7 +365,7 @@ export function PreorderTable({
           }`}
           aria-label="Previous page"
         >
-          &lt;
+          <ChevronLeftIcon />
         </Link>
         <span>
           Showing {range.start} to {range.end} from {total}
@@ -336,7 +379,7 @@ export function PreorderTable({
           }`}
           aria-label="Next page"
         >
-          &gt;
+          <ChevronRightIcon />
         </Link>
       </div>
     </div>

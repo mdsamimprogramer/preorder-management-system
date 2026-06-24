@@ -1,0 +1,10 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/preorders/[id]/route": "/api/preorders/[id]",
+  "/api/preorders/route": "/api/preorders",
+  "/page": "/",
+  "/preorders/[id]/page": "/preorders/[id]",
+  "/preorders/create/page": "/preorders/create",
+  "/preorders/page": "/preorders"
+}
