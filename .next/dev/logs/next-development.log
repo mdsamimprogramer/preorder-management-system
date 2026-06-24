@@ -1,196 +1,312 @@
-[00:00:00.795] Server  LOG      ✓ Ready in 518ms
-[00:00:03.369] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:07.615] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:00:07.677] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.findMany()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:58:145
+[00:00:00.899] Server  LOG      ✓ Ready in 581ms
+[00:00:11.299] Server  LOG      ○ Compiling /preorders ...
+[00:00:12.243] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:12.464] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:12.506] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:12.808] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:04.906] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:04.968] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:04.987] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:05.688] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:05.724] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:05.735] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:06.838] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:06.873] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:06.888] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:08.238] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:08.273] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:08.286] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:10.478] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:10.508] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:10.523] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:12.153] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:12.189] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:12.201] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:13.080] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:13.150] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:13.166] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:13.818] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:13.863] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:13.874] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:55.307] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:55.346] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:55.357] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:06.749] Server  WARN    Error: Route "/preorders/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:06.806] Server  ERROR    ⨯ Error: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
 
-  55 };
-  56 const skip = (page - 1) * limit;
-  57 const [items, total] = await Promise.all([
-→ 58     {imported module ./src/lib/prisma.ts}["prisma"].preorder.findMany(
-The table `main.Preorder` does not exist in the current database.
-[00:00:07.822] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findMany()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:58:145
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return {imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
 
-  55 };
-  56 const skip = (page - 1) * limit;
-  57 const [items, total] = await Promise.all([
-→ 58     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findMany(
-The table `main.Preorder` does not exist in the current database.
-[00:00:17.041] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:27.665] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:00:35.642] Server  WARN     ⚠ Cross origin request detected from 192.168.1.105 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:35.658] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:37.055] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:00:37.099] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.count()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+Note: Lines with ? are optional.
 
-  61     skip,
-  62     take: limit
-  63 }),
-→ 64 {imported module ./src/lib/prisma.ts}["prisma"].preorder.count(
-The table `main.Preorder` does not exist in the current database.
-[00:00:37.260] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+[00:04:06.944] Browser ERROR   uncaughtError: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
 
-  61     skip,
-  62     take: limit
-  63 }),
-→ 64 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count(
-The table `main.Preorder` does not exist in the current database.
-[00:00:53.698] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:00:53.754] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.count()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
 
-  61     skip,
-  62     take: limit
-  63 }),
-→ 64 {imported module ./src/lib/prisma.ts}["prisma"].preorder.count(
-The table `main.Preorder` does not exist in the current database.
-[00:00:54.025] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:54.025] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
 
-  61     skip,
-  62     take: limit
-  63 }),
-→ 64 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count(
-The table `main.Preorder` does not exist in the current database.
-[00:00:57.261] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:03.232] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:04.286] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:01:04.324] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.count()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+Note: Lines with ? are optional.
 
-  61     skip,
-  62     take: limit
-  63 }),
-→ 64 {imported module ./src/lib/prisma.ts}["prisma"].preorder.count(
-The table `main.Preorder` does not exist in the current database.
-[00:01:04.456] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+[00:04:17.905] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:21.245] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:21.284] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:21.307] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:23.665] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:23.701] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:23.718] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:25.149] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:25.184] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:25.198] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:25.920] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:25.950] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:25.959] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:26.808] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:26.840] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:26.854] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:31.107] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:31.133] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:31.143] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:31.753] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:31.785] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:31.799] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:32.317] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:32.344] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:32.356] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:34.087] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:34.120] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:34.135] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:34.908] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:34.937] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:34.955] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:35.474] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:35.496] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:35.506] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:39.538] Server  WARN    Error: Route "/preorders/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:39.563] Server  ERROR    ⨯ Error: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
 
-  61     skip,
-  62     take: limit
-  63 }),
-→ 64 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count(
-The table `main.Preorder` does not exist in the current database.
-[00:02:33.144] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:02:33.200] Server  ERROR    ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.count()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return {imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
 
-  61     skip,
-  62     take: limit
-  63 }),
-→ 64 {imported module ./src/lib/prisma.ts}["prisma"].preorder.count(
-The table `main.Preorder` does not exist in the current database.
-[00:02:33.362] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:33.362] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:64:145
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
 
-  61     skip,
-  62     take: limit
-  63 }),
-→ 64 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.count(
-The table `main.Preorder` does not exist in the current database.
-[00:02:36.126] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:48.385] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+Note: Lines with ? are optional.
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:02:49.221] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+[00:04:39.683] Browser ERROR   uncaughtError: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:02:49.985] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:02:50.129] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:02:50.291] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+Note: Lines with ? are optional.
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:02:50.435] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+[00:04:45.802] Server  WARN    Error: Route "/preorders/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:45.827] Server  ERROR    ⨯ Error: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:02:50.758] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return {imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:02:51.145] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
-[00:02:51.291] Server  ERROR   PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create()` invocation in
-C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\[root-of-the-server]__d78a9c07._.js:116:150
+Note: Lines with ? are optional.
 
-  113     });
-  114 }
-  115 async function createPreorder(data) {
-→ 116     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create(
-The table `main.Preorder` does not exist in the current database.
+[00:04:46.046] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:46.046] Browser ERROR   uncaughtError: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
+
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
+
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+[00:16:34.584] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:34.698] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:34.741] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:35.140] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:41.346] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:41.408] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:41.428] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:42.778] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:42.817] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:42.831] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:43.732] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:43.762] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:43.780] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:50.250] Server  WARN    Error: Route "/preorders/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:16:50.302] Server  ERROR    ⨯ Error: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
+
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return {imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
+
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+[00:16:50.436] Browser ERROR   uncaughtError: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
+
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
+
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+[00:18:18.100] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:18:18.163] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:18:18.187] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:18:18.422] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:27.647] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:29.878] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:18:29.920] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:18:29.946] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:15.473] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:15.527] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:15.541] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:25.276] Server  WARN    Error: Route "/preorders/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:25.291] Server  ERROR    ⨯ Error: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
+
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return {imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
+
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+[00:19:25.419] Browser ERROR   uncaughtError: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
+
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
+
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+[00:20:03.732] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:20:03.802] Server  WARN    Error: Route "/preorders" used `searchParams.sortBy`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:20:03.817] Server  WARN    Error: Route "/preorders" used `searchParams.filter`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:20:04.025] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:09.631] Server  WARN    Error: Route "/preorders/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:20:09.672] Server  ERROR    ⨯ Error: 
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
+
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return {imported module ./src/lib/prisma.ts}["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
+
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+[00:20:09.825] Browser ERROR   uncaughtError: Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique()` invocation in
+C:\Users\hp\Desktop\New folder\.next\dev\server\chunks\ssr\[root-of-the-server]__c6f2ea40._.js:77:148
+
+  74     };
+  75 }
+  76 async function getPreorderById(id) {
+→ 77     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.findUnique({
+           where: {
+         ?   id?: String
+           }
+         })
+
+Argument where of type PreorderWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+[00:21:21.086] Server  LOG      ✓ Compiled in 180ms
+[00:21:21.938] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:58.816] Server  LOG      ✓ Compiled in 83ms
+[00:23:23.106] Server  LOG      ✓ Compiled in 64ms
+[00:24:26.974] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:50.120] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

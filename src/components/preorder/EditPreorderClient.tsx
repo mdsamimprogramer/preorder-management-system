@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { PreorderForm } from "./PreorderForm";
-import type { PreorderFormData } from "@/types/preorder";
+import type { PreorderFormData, PreorderStatus } from "@/types/preorder";
 
 interface EditPreorderClientProps {
   preorder: {
@@ -13,7 +13,7 @@ interface EditPreorderClientProps {
     phone?: string;
     quantity: number;
     price: number;
-    status: string;
+    status: PreorderStatus;
   };
 }
 

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import EditPreorderClient from "@/components/preorder/EditPreorderClient";
 import { getPreorderById } from "@/services/preorder.service";
-import type { PreorderItem } from "@/types/preorder";
+import { toPreorderStatus, type PreorderItem } from "@/types/preorder";
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 async function getPreorder(id: string): Promise<PreorderItem | null> {
@@ -19,14 +19,15 @@ async function getPreorder(id: string): Promise<PreorderItem | null> {
     phone: preorder.phone ?? undefined,
     quantity: preorder.quantity,
     price: preorder.price,
-    status: preorder.status,
+    status: toPreorderStatus(preorder.status),
     createdAt: preorder.createdAt.toISOString(),
     updatedAt: preorder.updatedAt.toISOString(),
   };
 }
 
 export default async function EditPreorderPage({ params }: PageProps) {
-  const preorder = await getPreorder(params.id);
+  const { id } = await params;
+  const preorder = await getPreorder(id);
 
   if (!preorder) {
     return (

@@ -1,4 +1,8 @@
-import type { PreorderStatus } from "@prisma/client";
+export type PreorderStatus = "ACTIVE" | "INACTIVE";
+
+export function toPreorderStatus(value: string | null | undefined): PreorderStatus {
+  return value === "INACTIVE" ? "INACTIVE" : "ACTIVE";
+}
 
 export interface PreorderFormData {
   title: string;

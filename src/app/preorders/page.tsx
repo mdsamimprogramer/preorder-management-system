@@ -3,18 +3,19 @@ import { getPreorders } from "@/services/preorder.service";
 import type {
   PreorderFilter,
   PreorderSortBy,
-  PreorderListResult,
 } from "@/types/preorder";
 
 const DEFAULT_LIMIT = 10;
 
+type PreorderSearchParams = {
+  filter?: string;
+  sortBy?: string;
+  sortOrder?: string;
+  page?: string;
+};
+
 interface PageProps {
-  searchParams?: {
-    filter?: string;
-    sortBy?: string;
-    sortOrder?: string;
-    page?: string;
-  };
+  searchParams?: Promise<PreorderSearchParams>;
 }
 
 async function fetchPreorders({
@@ -22,7 +23,7 @@ async function fetchPreorders({
   sortBy = "createdAt",
   sortOrder = "desc",
   page = "1",
-}: PageProps["searchParams"] = {}) {
+}: PreorderSearchParams = {}) {
   const result = await getPreorders({
     filter: filter as PreorderFilter,
     sortBy: sortBy as PreorderSortBy,
@@ -49,7 +50,8 @@ function formatCurrency(value: number) {
 }
 
 export default async function PreordersPage({ searchParams }: PageProps) {
-  const result = await fetchPreorders(searchParams);
+  const resolvedSearchParams = await searchParams;
+  const result = await fetchPreorders(resolvedSearchParams);
   const { items, total, page, pages } = result;
 
   return (
@@ -77,8 +79,8 @@ export default async function PreordersPage({ searchParams }: PageProps) {
             {["ALL", "ACTIVE", "INACTIVE"].map((value) => (
               <Link
                 key={value}
-                href={`/preorders?filter=${value}&sortBy=${searchParams?.sortBy ?? "createdAt"}&sortOrder=${searchParams?.sortOrder ?? "desc"}&page=1`}
-                className={`rounded-2xl border px-4 py-3 text-sm font-medium transition ${searchParams?.filter === value ? "border-slate-900 bg-slate-900 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}
+                href={`/preorders?filter=${value}&sortBy=${resolvedSearchParams?.sortBy ?? "createdAt"}&sortOrder=${resolvedSearchParams?.sortOrder ?? "desc"}&page=1`}
+                className={`rounded-2xl border px-4 py-3 text-sm font-medium transition ${resolvedSearchParams?.filter === value ? "border-slate-900 bg-slate-900 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}
               >
                 {value === "ALL"
                   ? "All preorders"
@@ -157,13 +159,13 @@ export default async function PreordersPage({ searchParams }: PageProps) {
             </p>
             <div className="flex flex-wrap gap-2">
               <Link
-                href={`/preorders?filter=${searchParams?.filter ?? "ALL"}&sortBy=${searchParams?.sortBy ?? "createdAt"}&sortOrder=${searchParams?.sortOrder ?? "desc"}&page=${Math.max(1, page - 1)}`}
+                href={`/preorders?filter=${resolvedSearchParams?.filter ?? "ALL"}&sortBy=${resolvedSearchParams?.sortBy ?? "createdAt"}&sortOrder=${resolvedSearchParams?.sortOrder ?? "desc"}&page=${Math.max(1, page - 1)}`}
                 className="rounded-2xl border border-slate-300 bg-white px-4 py-2 text-sm text-slate-700 hover:border-slate-400 hover:bg-slate-100"
               >
                 Previous
               </Link>
               <Link
-                href={`/preorders?filter=${searchParams?.filter ?? "ALL"}&sortBy=${searchParams?.sortBy ?? "createdAt"}&sortOrder=${searchParams?.sortOrder ?? "desc"}&page=${Math.min(pages, page + 1)}`}
+                href={`/preorders?filter=${resolvedSearchParams?.filter ?? "ALL"}&sortBy=${resolvedSearchParams?.sortBy ?? "createdAt"}&sortOrder=${resolvedSearchParams?.sortOrder ?? "desc"}&page=${Math.min(pages, page + 1)}`}
                 className="rounded-2xl border border-slate-300 bg-white px-4 py-2 text-sm text-slate-700 hover:border-slate-400 hover:bg-slate-100"
               >
                 Next
