@@ -11,8 +11,9 @@ export async function GET(request: Request) {
     | null;
   const sortBy = searchParams.get("sortBy") as
     | "title"
-    | "price"
     | "createdAt"
+    | "startsAt"
+    | "endsAt"
     | null;
   const sortOrder = searchParams.get("sortOrder") as "asc" | "desc" | null;
   const page = Number(searchParams.get("page") ?? "1");

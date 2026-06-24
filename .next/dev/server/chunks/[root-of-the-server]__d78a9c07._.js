@@ -77,6 +77,20 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/prisma.ts [app-route] (ecmascript)");
 ;
 const DEFAULT_LIMIT = 10;
+function normalizePreorderData(data) {
+    return {
+        title: data.title,
+        customerName: data.customerName ?? data.title,
+        email: data.email,
+        phone: data.phone,
+        quantity: data.quantity,
+        price: data.price ?? 0,
+        preorderWhen: data.preorderWhen,
+        startsAt: data.startsAt ? new Date(data.startsAt) : new Date(),
+        endsAt: data.endsAt ? new Date(data.endsAt) : null,
+        status: data.status
+    };
+}
 async function getPreorders(params) {
     const { filter = "ALL", sortBy = "createdAt", sortOrder = "desc", page = 1, limit = DEFAULT_LIMIT } = params;
     const where = filter === "ALL" ? {} : {
@@ -114,7 +128,7 @@ async function getPreorderById(id) {
 }
 async function createPreorder(data) {
     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].preorder.create({
-        data
+        data: normalizePreorderData(data)
     });
 }
 async function updatePreorder(id, data) {
@@ -122,7 +136,7 @@ async function updatePreorder(id, data) {
         where: {
             id
         },
-        data
+        data: normalizePreorderData(data)
     });
 }
 async function deletePreorder(id) {

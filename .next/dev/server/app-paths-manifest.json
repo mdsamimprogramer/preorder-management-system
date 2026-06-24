@@ -1,8 +1,4 @@
 {
-  "/api/preorders/[id]/route": "app/api/preorders/[id]/route.js",
-  "/api/preorders/route": "app/api/preorders/route.js",
-  "/page": "app/page.js",
-  "/preorders/[id]/page": "app/preorders/[id]/page.js",
   "/preorders/create/page": "app/preorders/create/page.js",
   "/preorders/page": "app/preorders/page.js"
 }

@@ -81,6 +81,20 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/prisma.ts [app-rsc] (ecmascript)");
 ;
 const DEFAULT_LIMIT = 10;
+function normalizePreorderData(data) {
+    return {
+        title: data.title,
+        customerName: data.customerName ?? data.title,
+        email: data.email,
+        phone: data.phone,
+        quantity: data.quantity,
+        price: data.price ?? 0,
+        preorderWhen: data.preorderWhen,
+        startsAt: data.startsAt ? new Date(data.startsAt) : new Date(),
+        endsAt: data.endsAt ? new Date(data.endsAt) : null,
+        status: data.status
+    };
+}
 async function getPreorders(params) {
     const { filter = "ALL", sortBy = "createdAt", sortOrder = "desc", page = 1, limit = DEFAULT_LIMIT } = params;
     const where = filter === "ALL" ? {} : {
@@ -118,7 +132,7 @@ async function getPreorderById(id) {
 }
 async function createPreorder(data) {
     return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].preorder.create({
-        data
+        data: normalizePreorderData(data)
     });
 }
 async function updatePreorder(id, data) {
@@ -126,7 +140,7 @@ async function updatePreorder(id, data) {
         where: {
             id
         },
-        data
+        data: normalizePreorderData(data)
     });
 }
 async function deletePreorder(id) {
@@ -142,10 +156,15 @@ async function deletePreorder(id) {
 
 __turbopack_context__.s([
     "toPreorderStatus",
-    ()=>toPreorderStatus
+    ()=>toPreorderStatus,
+    "toPreorderWhen",
+    ()=>toPreorderWhen
 ]);
 function toPreorderStatus(value) {
     return value === "INACTIVE" ? "INACTIVE" : "ACTIVE";
+}
+function toPreorderWhen(value) {
+    return value === "out-of-stock" ? "out-of-stock" : "regardless-of-stock";
 }
 }),
 "[project]/src/app/preorders/[id]/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
@@ -176,6 +195,9 @@ async function getPreorder(id) {
         phone: preorder.phone ?? undefined,
         quantity: preorder.quantity,
         price: preorder.price,
+        preorderWhen: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$preorder$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["toPreorderWhen"])(preorder.preorderWhen),
+        startsAt: preorder.startsAt.toISOString(),
+        endsAt: preorder.endsAt?.toISOString() ?? null,
         status: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$preorder$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["toPreorderStatus"])(preorder.status),
         createdAt: preorder.createdAt.toISOString(),
         updatedAt: preorder.updatedAt.toISOString()
@@ -186,102 +208,106 @@ async function EditPreorderPage({ params }) {
     const preorder = await getPreorder(id);
     if (!preorder) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-            className: "min-h-screen bg-slate-50 px-6 py-8",
+            className: "min-h-screen bg-[#f3f3f3] px-4 py-8",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white p-10 shadow-card text-center",
+                className: "mx-auto max-w-[720px] rounded-xl border border-[#d9dbde] bg-white p-10 text-center shadow-sm",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-xl font-semibold text-slate-900",
+                        className: "text-[18px] font-bold text-[#202328]",
                         children: "Preorder not found"
                     }, void 0, false, {
                         fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                        lineNumber: 36,
+                        lineNumber: 43,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         href: "/preorders",
-                        className: "mt-6 inline-flex rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm text-slate-700 hover:bg-slate-50",
+                        className: "mt-6 inline-flex h-9 items-center justify-center rounded-md border border-[#d7dade] bg-white px-4 text-[13px] font-bold text-[#202328] hover:bg-[#f3f3f4]",
                         children: "Back to list"
                     }, void 0, false, {
                         fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                        lineNumber: 39,
+                        lineNumber: 46,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                lineNumber: 35,
+                lineNumber: 42,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/preorders/[id]/page.tsx",
-            lineNumber: 34,
+            lineNumber: 41,
             columnNumber: 7
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "min-h-screen bg-slate-50 px-6 py-8",
+        className: "min-h-screen bg-[#f3f3f3] px-4 py-6 text-[#202328]",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white p-8 shadow-card",
+            className: "mx-auto w-full max-w-[820px]",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mb-8 flex items-center justify-between gap-4",
+                    className: "mb-7 flex items-center justify-between",
                     children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/preorders",
+                            className: "inline-flex h-9 items-center justify-center rounded-md border border-[#d7dade] bg-white px-4 text-[13px] font-bold text-[#202328] shadow-sm hover:bg-[#f3f3f4]",
+                            children: "< Back"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/preorders/[id]/page.tsx",
+                            lineNumber: 61,
+                            columnNumber: 11
+                        }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center gap-3",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-sm uppercase tracking-[0.28em] text-slate-500",
-                                    children: "Edit preorder"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/preorders",
+                                    className: "inline-flex h-9 items-center justify-center rounded-md border border-[#d7dade] bg-white px-4 text-[13px] font-bold text-[#202328] shadow-sm hover:bg-[#f3f3f4]",
+                                    children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 68,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                    className: "mt-3 text-3xl font-semibold text-slate-900",
-                                    children: "Update preorder details"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "submit",
+                                    form: "preorder-form",
+                                    className: "inline-flex h-9 items-center justify-center rounded-md bg-[#1f2023] px-5 text-[13px] font-bold text-white shadow-sm ring-1 ring-black/20 hover:bg-black",
+                                    children: "Save changes"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                                    lineNumber: 58,
+                                    lineNumber: 74,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                            lineNumber: 54,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                            href: "/preorders",
-                            className: "rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 transition hover:bg-slate-50",
-                            children: "Back to list"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                            lineNumber: 62,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                    lineNumber: 53,
+                    lineNumber: 60,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$preorder$2f$EditPreorderClient$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                     preorder: preorder
                 }, void 0, false, {
                     fileName: "[project]/src/app/preorders/[id]/page.tsx",
-                    lineNumber: 70,
+                    lineNumber: 84,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/preorders/[id]/page.tsx",
-            lineNumber: 52,
+            lineNumber: 59,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/preorders/[id]/page.tsx",
-        lineNumber: 51,
+        lineNumber: 58,
         columnNumber: 5
     }, this);
 }

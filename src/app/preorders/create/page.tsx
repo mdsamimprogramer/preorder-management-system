@@ -3,23 +3,30 @@ import CreatePreorderClient from "@/components/preorder/CreatePreorderClient";
 
 export default function CreatePreorderPage() {
   return (
-    <main className="min-h-screen bg-slate-50 px-6 py-8">
-      <div className="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white p-8 shadow-card">
-        <div className="mb-8 flex items-center justify-between gap-4">
-          <div>
-            <p className="text-sm uppercase tracking-[0.28em] text-slate-500">
-              Create preorder
-            </p>
-            <h1 className="mt-3 text-3xl font-semibold text-slate-900">
-              Add a new preorder
-            </h1>
-          </div>
+    <main className="min-h-screen bg-[#f3f3f3] px-4 py-6 text-[#202328]">
+      <div className="mx-auto w-full max-w-[820px]">
+        <div className="mb-7 flex items-center justify-between">
           <Link
             href="/preorders"
-            className="rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 transition hover:bg-slate-50"
+            className="inline-flex h-9 items-center justify-center rounded-md border border-[#d7dade] bg-white px-4 text-[13px] font-bold text-[#202328] shadow-sm hover:bg-[#f3f3f4]"
           >
-            Back to list
+            &lt; Back
           </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/preorders"
+              className="inline-flex h-9 items-center justify-center rounded-md border border-[#d7dade] bg-white px-4 text-[13px] font-bold text-[#202328] shadow-sm hover:bg-[#f3f3f4]"
+            >
+              Cancel
+            </Link>
+            <button
+              type="submit"
+              form="preorder-form"
+              className="inline-flex h-9 items-center justify-center rounded-md bg-[#1f2023] px-5 text-[13px] font-bold text-white shadow-sm ring-1 ring-black/20 hover:bg-black"
+            >
+              Save changes
+            </button>
+          </div>
         </div>
 
         <CreatePreorderClient />

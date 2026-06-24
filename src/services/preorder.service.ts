@@ -3,6 +3,21 @@ import type { PreorderFormData, PreorderQueryParams } from "@/types/preorder";
 
 const DEFAULT_LIMIT = 10;
 
+function normalizePreorderData(data: PreorderFormData) {
+  return {
+    title: data.title,
+    customerName: data.customerName ?? data.title,
+    email: data.email,
+    phone: data.phone,
+    quantity: data.quantity,
+    price: data.price ?? 0,
+    preorderWhen: data.preorderWhen,
+    startsAt: data.startsAt ? new Date(data.startsAt) : new Date(),
+    endsAt: data.endsAt ? new Date(data.endsAt) : null,
+    status: data.status,
+  };
+}
+
 export async function getPreorders(params: PreorderQueryParams) {
   const {
     filter = "ALL",
@@ -40,11 +55,14 @@ export async function getPreorderById(id: string) {
 }
 
 export async function createPreorder(data: PreorderFormData) {
-  return prisma.preorder.create({ data });
+  return prisma.preorder.create({ data: normalizePreorderData(data) });
 }
 
 export async function updatePreorder(id: string, data: PreorderFormData) {
-  return prisma.preorder.update({ where: { id }, data });
+  return prisma.preorder.update({
+    where: { id },
+    data: normalizePreorderData(data),
+  });
 }
 
 export async function deletePreorder(id: string) {
